@@ -2,7 +2,7 @@ import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
 import en from "./translations/en.json";
 import sq from "./translations/sq.json";
-import { HashRouter as AppRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as BrowserRouter, Route, Routes } from "react-router-dom";
 import Categories from "./pages/Categories";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -30,26 +30,22 @@ i18next.use(initReactI18next).init({
 
 function App() {
   return (
-    <AppRouter>
+    <BrowserRouter>
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/account" component={Account} />
-        <Route exact path="/categories" component={Categories} />
-        <Route exact path="/activity" component={ActivityCreate} />
-        <Route
-          exact
-          path="/activity/:activityId/edit"
-          component={ActivityEdit}
-        />
-        <Route exact path="/activity/:activityId" component={Activity} />
-        <Route exact path="/blogs" component={Blog} />
-        <Route exact path="/blog" component={BlogCreate} />
-        <Route exact path="/blog/:blogId" component={BlogPost} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" component={Login} />
+        <Route path="/register" component={Register} />
+        <Route path="/account" component={Account} />
+        <Route path="/categories" component={Categories} />
+        <Route path="/activity" component={ActivityCreate} />
+        <Route path="/activity/:activityId/edit" component={ActivityEdit} />
+        <Route path="/activity/:activityId" component={Activity} />
+        <Route path="/blogs" component={Blog} />
+        <Route path="/blog" component={BlogCreate} />
+        <Route path="/blog/:blogId" component={BlogPost} />
+        <Route path="/dashboard" component={Dashboard} />
       </Routes>
-    </AppRouter>
+    </BrowserRouter>
   );
 }
 

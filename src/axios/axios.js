@@ -6,11 +6,12 @@ import { getToken } from "./tokenStore";
  * @var {string}
  */
 const endpoint = process.env.local.REACT_APP_API_ENDPOINT;
-console.log(endpoint, "so");
 /**
  * @var {string}
  */
-const publicEndpoint = endpoint.replace("/api/", "/").replace("/api", "/");
+const publicEndpoint = endpoint
+  ? endpoint.replace("/api/", "/")
+  : "http://127.0.0.1:8000/";
 
 /**
  * @var {object}
