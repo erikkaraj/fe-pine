@@ -33,17 +33,17 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/account" component={Account} />
-        <Route path="/categories" component={Categories} />
-        <Route path="/activity" component={ActivityCreate} />
-        <Route path="/activity/:activityId/edit" component={ActivityEdit} />
-        <Route path="/activity/:activityId" component={Activity} />
-        <Route path="/blogs" component={Blog} />
-        <Route path="/blog" component={BlogCreate} />
-        <Route path="/blog/:blogId" component={BlogPost} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/activity" element={<ActivityCreate />} />
+        <Route path="/activity/:activityId/edit" element={<ActivityEdit />} />
+        <Route path="/activity/:activityId" element={<Activity />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/blog" element={<BlogCreate />} />
+        <Route path="/blog/:blogId" element={<BlogPost />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

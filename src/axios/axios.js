@@ -5,7 +5,7 @@ import { getToken } from "./tokenStore";
  * ! Use environment variables
  * @var {string}
  */
-const endpoint = process.env.local.REACT_APP_API_ENDPOINT;
+const endpoint = "http://127.0.0.1:8000/api";
 /**
  * @var {string}
  */
